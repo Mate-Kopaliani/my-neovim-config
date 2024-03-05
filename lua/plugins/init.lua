@@ -209,13 +209,7 @@ local default_plugins = {
 		init = function()
 			require("core.utils").load_mappings("nvimtree")
 		end,
-		opts = function()
-			return require("plugins.configs.nvimtree")
-		end,
-		config = function(_, opts)
-			dofile(vim.g.base46_cache .. "nvimtree")
-			require("nvim-tree").setup(opts)
-		end,
+		opts = {},
 	},
 
 	{
@@ -228,21 +222,8 @@ local default_plugins = {
 		init = function()
 			require("core.utils").load_mappings("telescope")
 		end,
-		opts = function()
-			return require("plugins.configs.telescope")
-		end,
-		config = function(_, opts)
-			dofile(vim.g.base46_cache .. "telescope")
-			local telescope = require("telescope")
-			telescope.setup(opts)
-
-			-- load extensions
-			for _, ext in ipairs(opts.extensions_list) do
-				telescope.load_extension(ext)
-			end
-		end,
+		opts = {},
 	},
-
 	-- Only load whichkey after all the gui
 	{
 		"folke/which-key.nvim",

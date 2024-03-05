@@ -1,9 +1,5 @@
 local plugins = {
 	-- {
-	-- 	"codota/tabnine-nvim",
-	-- 	build = "./dl_binaries.sh",
-	-- },
-	-- {
 	-- 	"Exafunction/codeium.vim",
 	-- 	event = "BufEnter",
 	-- },

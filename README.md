@@ -1,5 +1,6 @@
 # My Neovim Configuration
 ![Neovim Screenshot](./images/2024-03-05_22-30.png)
+![Neovim Screenshot](./images/2024-03-05_22-23.png)
 
 ## Requirements
 Neovim >= 0.9

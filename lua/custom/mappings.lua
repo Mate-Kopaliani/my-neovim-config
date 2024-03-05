@@ -10,17 +10,4 @@ M.dap = {
 	},
 }
 
-vim.api.nvim_exec(
-	[[
-  augroup FormatAutogroup
-    autocmd!
-    autocmd BufWritePost * FormatWrite
-  augroup END
-]],
-	false
-)
-
--- line number
-vim.cmd("set rnu! ")
-
 return M

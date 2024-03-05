@@ -30,14 +30,4 @@ require("plugins")
 -- 	log_file_path = nil, -- absolute path to Tabnine log file
 -- })
 
-require("nvim-ts-autotag").setup({
-	filetypes = { "html", "javascript", "typescript", "javascriptreact", "typescriptreact", "xml" },
-})
--- CursorLine highlight
-vim.cmd([[
-
-   augroup ilikecursorline
-      autocmd VimEnter * :highlight CursorLine guibg=#1c1c1c
-   augroup END
-
-]])
+require("custom.extras")

@@ -12,8 +12,6 @@ end
 
 common_setup(lspconfig.clangd)
 
-common_setup(lspconfig.texlab)
-
 common_setup(lspconfig.bashls)
 
 common_setup(lspconfig.ocamllsp)
@@ -23,8 +21,8 @@ common_setup(lspconfig.cssls)
 common_setup(lspconfig.dockerls)
 
 lspconfig.jdtls.setup({
-	filetypes = { "java" },
-	require("custom.configs.java"),
+	on_attach = on_attach,
+	capabilities = capabilities,
 })
 
 lspconfig.html.setup({

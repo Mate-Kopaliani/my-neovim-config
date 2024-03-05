@@ -1,11 +1,3 @@
--- more space in the neovim command line for displaying messages
--- use this function notation to build some variables
-vim.opt_local.shiftwidth = 4
-vim.opt_local.tabstop = 4
-vim.opt_local.softtabstop = 4
-vim.opt_local.ts = 4
-vim.opt_local.expandtab = true
-
 local status, jdtls = pcall(require, "jdtls")
 if not status then
 	return

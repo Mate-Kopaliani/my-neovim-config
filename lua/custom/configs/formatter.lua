@@ -34,7 +34,7 @@ require("formatter").setup({
 			end,
 		},
 
-		-- Formatter configurations for C and C++
+		-- Formatter configurations for C/C++ and Java
 		c = {
 			function()
 				return {
@@ -42,7 +42,7 @@ require("formatter").setup({
 					args = {
 						"--assume-filename",
 						util.get_current_buffer_file_name(),
-						"-style=file",
+						"-style=Google",
 					},
 					stdin = true,
 				}
@@ -55,7 +55,21 @@ require("formatter").setup({
 					args = {
 						"--assume-filename",
 						util.get_current_buffer_file_name(),
-						"-style=file",
+						"-style=Google",
+					},
+					stdin = true,
+				}
+			end,
+		},
+
+		java = {
+			function()
+				return {
+					exe = "clang-format",
+					args = {
+						"--assume-filename",
+						util.get_current_buffer_file_name(),
+						"-style=Google",
 					},
 					stdin = true,
 				}
@@ -158,7 +172,7 @@ require("formatter").setup({
 						vim.api.nvim_buf_get_name(0),
 						"--single-quote",
 						"true",
-						"--tab-width 3",
+						"--tab-width 4",
 					},
 					stdin = true,
 				}

@@ -3,6 +3,24 @@ local plugins = {
 	-- 	"codota/tabnine-nvim",
 	-- 	build = "./dl_binaries.sh",
 	-- },
+	-- {
+	-- 	"Exafunction/codeium.vim",
+	-- 	event = "BufEnter",
+	-- },
+	{
+		"xiyaowong/transparent.nvim",
+		opts = {},
+	},
+	{
+		"folke/todo-comments.nvim",
+		dependencies = { "nvim-lua/plenary.nvim" },
+		opts = {},
+	},
+	{
+		"ThePrimeagen/harpoon",
+		branch = "harpoon2",
+		dependencies = { "nvim-lua/plenary.nvim" },
+	},
 	{
 		"mfussenegger/nvim-jdtls",
 		event = "BufRead",
@@ -40,12 +58,6 @@ local plugins = {
 		ft = "rust",
 		init = function()
 			vim.g.rustfmt_autosave = 1
-		end,
-	},
-	{
-		"norcalli/nvim-colorizer.lua",
-		config = function()
-			require("colorizer").setup()
 		end,
 	},
 	{
@@ -89,18 +101,24 @@ local plugins = {
 		"williamboman/mason.nvim",
 		opts = {
 			ensure_installed = {
-				"tsx",
-				"typescript-language-server",
-				"js-debug-adapter",
-				"eslint-lsp",
-				"prettier",
-				"clangd",
 				"pyright",
 				"rust-analyzer",
-				"codedlldb",
+				"js-debug-adapter",
 				"bash-language-server",
-				"ocaml-language-server",
+				"black",
 				"clang-format",
+				"clangd",
+				"css-lsp",
+				"dockerfile-language-server",
+				"eslint-lsp",
+				"html-lsp",
+				"java-test",
+				"jdtls",
+				"jq",
+				"lua-language-server",
+				"prettier",
+				"stylua",
+				"typescript-language-server",
 			},
 		},
 	},
